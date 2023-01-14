@@ -32,13 +32,18 @@ fetch(weatherFive)
         console.log(cityName);
 
         //date weather condition tempature humidity wind speed 
-        const { list :[ { dt_txt: currentTime, main: { humidity, temp: tempature }, wind: { speed } } ] } = weatherData;
+        const { list :[ { dt_txt: currentDay, main: { humidity, temp: tempature }, wind: { speed } } ] } = weatherData;
         
-        const setCondition = document.querySelector('.weather-display');
-        const 
-        console.log(setCondition);
+        //set the city, day, humidity ect..
+        document.querySelector('#cityName').textContent = cityName;
+        document.querySelector('#date').textContent = `Date: ${currentDay}`;
+        document.querySelector('#humidity').textContent = `Humidity: ${humidity}`;
+        document.querySelector('#temp').textContent = `Temperature: ${tempature}`;
+        document.querySelector('#speed').textContent = `Speed: ${speed}`;
 
-    //<div class="weather-display"></div>
+        
+
+   
 
 
         
